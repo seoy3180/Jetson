@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ff_interface/srv/ConveyorConnection.srv
+// generated code does not contain a copyright notice
+
+
+module ff_interface {
+  module srv {
+    @verbatim (language="comment", text=
+      "ConveyourConnection")
+    struct ConveyorConnection_Request {
+      string message;
+    };
+    struct ConveyorConnection_Response {
+      boolean success;
+
+      string response;
+    };
+  };
+};

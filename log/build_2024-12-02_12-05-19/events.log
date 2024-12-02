@@ -1,0 +1,134 @@
+[0.000000] (-) TimerEvent: {}
+[0.000653] (control) JobQueued: {'identifier': 'control', 'dependencies': OrderedDict()}
+[0.001196] (ff_interface) JobQueued: {'identifier': 'ff_interface', 'dependencies': OrderedDict()}
+[0.001520] (control) JobStarted: {'identifier': 'control'}
+[0.021269] (ff_interface) JobStarted: {'identifier': 'ff_interface'}
+[0.099388] (-) TimerEvent: {}
+[0.200028] (-) TimerEvent: {}
+[0.300669] (-) TimerEvent: {}
+[0.401230] (-) TimerEvent: {}
+[0.501823] (-) TimerEvent: {}
+[0.602443] (-) TimerEvent: {}
+[0.644390] (ff_interface) JobProgress: {'identifier': 'ff_interface', 'progress': 'cmake'}
+[0.645146] (ff_interface) Command: {'cmd': ['/usr/bin/cmake', '/home/rokey1/Jetson_ws/src/ff_interface', '-DCMAKE_INSTALL_PREFIX=/home/rokey1/Jetson_ws/install/ff_interface'], 'cwd': '/home/rokey1/Jetson_ws/build/ff_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rokey1'), ('SSH_CLIENT', '192.168.10.48 37220 22'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/rokey1'), ('OLDPWD', '/home/rokey1'), ('SSH_TTY', '/dev/pts/0'), ('JETSON_L4T', '36.3.0'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin NX Engineering Reference Developer Kit'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/rokey1/turtlebot3_ws/install:/home/rokey1/Gripper_Camera_jetsonNano_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rokey1'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (8GB ram)'), ('JETSON_SERIAL_NUMBER', '1424023059199'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '14'), ('GAZEBO_MODEL_PATH', '/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_bringup/share/turtlebot3_manipulation_bringup/worlds:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_description/share'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/rokey1/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('ROS_DOMAIN_ID', '12'), ('AMENT_PREFIX_PATH', '/home/rokey1/turtlebot3_ws/install/turtlebot3:/home/rokey1/turtlebot3_ws/install/turtlebot3_teleop:/home/rokey1/turtlebot3_ws/install/turtlebot3_bringup:/home/rokey1/turtlebot3_ws/install/turtlebot3_node:/home/rokey1/turtlebot3_ws/install/turtlebot3_navigation2:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_teleop:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_navigation2:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_moveit_config:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_hardware:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_example:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_bringup:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_description:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_cartographer:/home/rokey1/turtlebot3_ws/install/turtlebot3_example:/home/rokey1/turtlebot3_ws/install/turtlebot3_description:/home/rokey1/turtlebot3_ws/install/turtlebot3_cartographer:/home/rokey1/turtlebot3_ws/install/ld08_driver:/home/rokey1/Gripper_Camera_jetsonNano_ws/install/image_sub:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/rokey1/Jetson_ws/build/ff_interface'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.10.48 37220 192.168.10.59 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('LDS_MODEL', 'LDS-02'), ('PYTHONPATH', '/home/rokey1/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/rokey1/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/rokey1/Gripper_Camera_jetsonNano_ws/install/image_sub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('JETSON_JETPACK', '6.0'), ('CMAKE_PREFIX_PATH', '/home/rokey1/turtlebot3_ws/install/turtlebot3:/home/rokey1/turtlebot3_ws/install/turtlebot3_bringup:/home/rokey1/turtlebot3_ws/install/turtlebot3_node:/home/rokey1/turtlebot3_ws/install/turtlebot3_navigation2:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_teleop:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_navigation2:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_moveit_config:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_hardware:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_example:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_bringup:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_description:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_cartographer:/home/rokey1/turtlebot3_ws/install/turtlebot3_description:/home/rokey1/turtlebot3_ws/install/turtlebot3_cartographer:/home/rokey1/turtlebot3_ws/install/ld08_driver:/home/rokey1/turtlebot3_ws/install/turtlebot3_teleop:/home/rokey1/turtlebot3_ws/install/turtlebot3_example:/home/rokey1/Gripper_Camera_jetsonNano_ws/install/image_sub:/opt/ros/humble'), ('JETSON_P_NUMBER', 'p3767-0003')]), 'shell': False}
+[0.702602] (-) TimerEvent: {}
+[0.803228] (-) TimerEvent: {}
+[0.828236] (ff_interface) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.903359] (-) TimerEvent: {}
+[0.960757] (ff_interface) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.978545] (ff_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.003519] (-) TimerEvent: {}
+[1.104132] (-) TimerEvent: {}
+[1.109600] (ff_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.122745] (ff_interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.123510] (ff_interface) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.124662] (ff_interface) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.131298] (ff_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.204296] (-) TimerEvent: {}
+[1.280369] (ff_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.293499] (ff_interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.294127] (ff_interface) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.295058] (ff_interface) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.304375] (-) TimerEvent: {}
+[1.314230] (ff_interface) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.404550] (-) TimerEvent: {}
+[1.505205] (-) TimerEvent: {}
+[1.527295] (control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/control', 'build', '--build-base', '/home/rokey1/Jetson_ws/build/control/build', 'install', '--record', '/home/rokey1/Jetson_ws/build/control/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/rokey1/Jetson_ws/src/control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'rokey1', 'SSH_CLIENT': '192.168.10.48 37220 22', 'LC_TIME': 'ko_KR.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_hardware/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/rokey1', 'OLDPWD': '/home/rokey1', 'SSH_TTY': '/dev/pts/0', 'JETSON_L4T': '36.3.0', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Jetson Orin NX Engineering Reference Developer Kit', 'LC_MONETARY': 'ko_KR.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/rokey1/turtlebot3_ws/install:/home/rokey1/Gripper_Camera_jetsonNano_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'rokey1', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (8GB ram)', 'JETSON_SERIAL_NUMBER': '1424023059199', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '14', 'GAZEBO_MODEL_PATH': '/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_bringup/share/turtlebot3_manipulation_bringup/worlds:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_description/share', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/rokey1/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra234', 'ROS_DOMAIN_ID': '12', 'AMENT_PREFIX_PATH': '/home/rokey1/turtlebot3_ws/install/turtlebot3:/home/rokey1/turtlebot3_ws/install/turtlebot3_teleop:/home/rokey1/turtlebot3_ws/install/turtlebot3_bringup:/home/rokey1/turtlebot3_ws/install/turtlebot3_node:/home/rokey1/turtlebot3_ws/install/turtlebot3_navigation2:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_teleop:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_navigation2:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_moveit_config:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_hardware:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_example:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_bringup:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_description:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_cartographer:/home/rokey1/turtlebot3_ws/install/turtlebot3_example:/home/rokey1/turtlebot3_ws/install/turtlebot3_description:/home/rokey1/turtlebot3_ws/install/turtlebot3_cartographer:/home/rokey1/turtlebot3_ws/install/ld08_driver:/home/rokey1/Gripper_Camera_jetsonNano_ws/install/image_sub:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/rokey1/Jetson_ws/build/control', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.10.48 37220 192.168.10.59 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'LDS_MODEL': 'LDS-02', 'PYTHONPATH': '/home/rokey1/Jetson_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages:/home/rokey1/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/home/rokey1/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages:/home/rokey1/Gripper_Camera_jetsonNano_ws/install/image_sub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '6.0', 'CMAKE_PREFIX_PATH': '/home/rokey1/turtlebot3_ws/install/turtlebot3:/home/rokey1/turtlebot3_ws/install/turtlebot3_bringup:/home/rokey1/turtlebot3_ws/install/turtlebot3_node:/home/rokey1/turtlebot3_ws/install/turtlebot3_navigation2:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_teleop:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_navigation2:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_moveit_config:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_hardware:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_example:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_bringup:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_description:/home/rokey1/turtlebot3_ws/install/turtlebot3_manipulation_cartographer:/home/rokey1/turtlebot3_ws/install/turtlebot3_description:/home/rokey1/turtlebot3_ws/install/turtlebot3_cartographer:/home/rokey1/turtlebot3_ws/install/ld08_driver', 'JETSON_P_NUMBER': 'p3767-0003'}, 'shell': False}
+[1.605350] (-) TimerEvent: {}
+[1.657264] (ff_interface) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.705502] (-) TimerEvent: {}
+[1.806162] (-) TimerEvent: {}
+[1.906895] (-) TimerEvent: {}
+[1.967104] (ff_interface) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.985274] (ff_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.006989] (-) TimerEvent: {}
+[2.011681] (ff_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.092499] (control) StdoutLine: {'line': b'running egg_info\n'}
+[2.093947] (control) StdoutLine: {'line': b'creating ../../build/control/control.egg-info\n'}
+[2.094501] (control) StdoutLine: {'line': b'writing ../../build/control/control.egg-info/PKG-INFO\n'}
+[2.095146] (control) StdoutLine: {'line': b'writing dependency_links to ../../build/control/control.egg-info/dependency_links.txt\n'}
+[2.095402] (control) StdoutLine: {'line': b'writing entry points to ../../build/control/control.egg-info/entry_points.txt\n'}
+[2.095609] (control) StdoutLine: {'line': b'writing requirements to ../../build/control/control.egg-info/requires.txt\n'}
+[2.095806] (control) StdoutLine: {'line': b'writing top-level names to ../../build/control/control.egg-info/top_level.txt\n'}
+[2.096193] (control) StdoutLine: {'line': b"writing manifest file '../../build/control/control.egg-info/SOURCES.txt'\n"}
+[2.100070] (control) StdoutLine: {'line': b"reading manifest file '../../build/control/control.egg-info/SOURCES.txt'\n"}
+[2.101308] (control) StdoutLine: {'line': b"writing manifest file '../../build/control/control.egg-info/SOURCES.txt'\n"}
+[2.101553] (control) StdoutLine: {'line': b'running build\n'}
+[2.101749] (control) StdoutLine: {'line': b'running build_py\n'}
+[2.101932] (control) StdoutLine: {'line': b'creating /home/rokey1/Jetson_ws/build/control/build\n'}
+[2.102136] (control) StdoutLine: {'line': b'creating /home/rokey1/Jetson_ws/build/control/build/lib\n'}
+[2.102304] (control) StdoutLine: {'line': b'creating /home/rokey1/Jetson_ws/build/control/build/lib/control\n'}
+[2.102426] (control) StdoutLine: {'line': b'copying control/control_node.py -> /home/rokey1/Jetson_ws/build/control/build/lib/control\n'}
+[2.103121] (control) StdoutLine: {'line': b'copying control/navigation.py -> /home/rokey1/Jetson_ws/build/control/build/lib/control\n'}
+[2.103356] (control) StdoutLine: {'line': b'copying control/__init__.py -> /home/rokey1/Jetson_ws/build/control/build/lib/control\n'}
+[2.103594] (control) StdoutLine: {'line': b'running install\n'}
+[2.104291] (control) StdoutLine: {'line': b'running install_lib\n'}
+[2.106197] (control) StdoutLine: {'line': b'creating /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control\n'}
+[2.106434] (control) StdoutLine: {'line': b'copying /home/rokey1/Jetson_ws/build/control/build/lib/control/control_node.py -> /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control\n'}
+[2.106675] (control) StdoutLine: {'line': b'copying /home/rokey1/Jetson_ws/build/control/build/lib/control/navigation.py -> /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control\n'}
+[2.106916] (control) StdoutLine: {'line': b'copying /home/rokey1/Jetson_ws/build/control/build/lib/control/__init__.py -> /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control\n'}
+[2.107055] (-) TimerEvent: {}
+[2.108126] (control) StdoutLine: {'line': b'byte-compiling /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control/control_node.py to control_node.cpython-310.pyc\n'}
+[2.110284] (control) StdoutLine: {'line': b'byte-compiling /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control/navigation.py to navigation.cpython-310.pyc\n'}
+[2.111609] (control) StdoutLine: {'line': b'byte-compiling /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control/__init__.py to __init__.cpython-310.pyc\n'}
+[2.111921] (control) StdoutLine: {'line': b'running install_data\n'}
+[2.112129] (control) StdoutLine: {'line': b'creating /home/rokey1/Jetson_ws/install/control/share/ament_index\n'}
+[2.112317] (control) StdoutLine: {'line': b'creating /home/rokey1/Jetson_ws/install/control/share/ament_index/resource_index\n'}
+[2.112532] (control) StdoutLine: {'line': b'creating /home/rokey1/Jetson_ws/install/control/share/ament_index/resource_index/packages\n'}
+[2.112717] (control) StdoutLine: {'line': b'copying resource/control -> /home/rokey1/Jetson_ws/install/control/share/ament_index/resource_index/packages\n'}
+[2.112879] (control) StdoutLine: {'line': b'copying package.xml -> /home/rokey1/Jetson_ws/install/control/share/control\n'}
+[2.113003] (control) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.116842] (control) StdoutLine: {'line': b'Copying ../../build/control/control.egg-info to /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info\n'}
+[2.118769] (control) StdoutLine: {'line': b'running install_scripts\n'}
+[2.138407] (ff_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.160746] (control) StdoutLine: {'line': b"writing list of installed files to '/home/rokey1/Jetson_ws/build/control/install.log'\n"}
+[2.207249] (-) TimerEvent: {}
+[2.232350] (control) CommandEnded: {'returncode': 0}
+[2.240629] (ff_interface) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[2.255021] (control) JobEnded: {'identifier': 'control', 'rc': 0}
+[2.307391] (-) TimerEvent: {}
+[2.408025] (-) TimerEvent: {}
+[2.508679] (-) TimerEvent: {}
+[2.609360] (-) TimerEvent: {}
+[2.709911] (-) TimerEvent: {}
+[2.797581] (ff_interface) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):\n'}
+[2.798571] (ff_interface) StderrLine: {'line': b'  execute_process(/usr/bin/python3 -m rosidl_adapter --package-name\n'}
+[2.798915] (ff_interface) StderrLine: {'line': b'  ff_interface --arguments-file\n'}
+[2.799185] (ff_interface) StderrLine: {'line': b'  /home/rokey1/Jetson_ws/build/ff_interface/rosidl_adapter__arguments__ff_interface.json\n'}
+[2.799441] (ff_interface) StderrLine: {'line': b'  --output-dir\n'}
+[2.799677] (ff_interface) StderrLine: {'line': b'  /home/rokey1/Jetson_ws/build/ff_interface/rosidl_adapter/ff_interface\n'}
+[2.799903] (ff_interface) StderrLine: {'line': b'  --output-file\n'}
+[2.800120] (ff_interface) StderrLine: {'line': b'  /home/rokey1/Jetson_ws/build/ff_interface/rosidl_adapter/ff_interface.idls)\n'}
+[2.800338] (ff_interface) StderrLine: {'line': b'  returned error code 1:\n'}
+[2.800553] (ff_interface) StderrLine: {'line': b'\n'}
+[2.800766] (ff_interface) StderrLine: {'line': b'  Traceback (most recent call last):\n'}
+[2.800977] (ff_interface) StderrLine: {'line': b'\n'}
+[2.801187] (ff_interface) StderrLine: {'line': b'    File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main\n'}
+[2.801398] (ff_interface) StderrLine: {'line': b'      return _run_code(code, main_globals, None,\n'}
+[2.801605] (ff_interface) StderrLine: {'line': b'    File "/usr/lib/python3.10/runpy.py", line 86, in _run_code\n'}
+[2.801810] (ff_interface) StderrLine: {'line': b'      exec(code, run_globals)\n'}
+[2.802022] (ff_interface) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>\n'}
+[2.802232] (ff_interface) StderrLine: {'line': b'      sys.exit(main())\n'}
+[2.802438] (ff_interface) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main\n'}
+[2.802647] (ff_interface) StderrLine: {'line': b'      abs_idl_file = convert_to_idl(\n'}
+[2.802905] (ff_interface) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 24, in convert_to_idl\n'}
+[2.803126] (ff_interface) StderrLine: {'line': b'      return convert_srv_to_idl(\n'}
+[2.803337] (ff_interface) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/srv/__init__.py", line 28, in convert_srv_to_idl\n'}
+[2.803556] (ff_interface) StderrLine: {'line': b'      srv = parse_service_string(package_name, input_file.stem, content)\n'}
+[2.803770] (ff_interface) StderrLine: {'line': b'    File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 850, in parse_service_string\n'}
+[2.804041] (ff_interface) StderrLine: {'line': b'      raise InvalidServiceSpecification(\n'}
+[2.804253] (ff_interface) StderrLine: {'line': b'\n'}
+[2.804462] (ff_interface) StderrLine: {'line': b'  rosidl_adapter.parser.InvalidServiceSpecification: Could not find separator\n'}
+[2.804679] (ff_interface) StderrLine: {'line': b"  '---' between request and response\n"}
+[2.804889] (ff_interface) StderrLine: {'line': b'\n'}
+[2.805097] (ff_interface) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.805305] (ff_interface) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[2.805516] (ff_interface) StderrLine: {'line': b'  CMakeLists.txt:17 (rosidl_generate_interfaces)\n'}
+[2.805727] (ff_interface) StderrLine: {'line': b'\n'}
+[2.805934] (ff_interface) StderrLine: {'line': b'\x1b[0m\n'}
+[2.806144] (ff_interface) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.806401] (ff_interface) StdoutLine: {'line': b'See also "/home/rokey1/Jetson_ws/build/ff_interface/CMakeFiles/CMakeOutput.log".\n'}
+[2.810042] (-) TimerEvent: {}
+[2.824769] (ff_interface) CommandEnded: {'returncode': 1}
+[2.867419] (ff_interface) JobEnded: {'identifier': 'ff_interface', 'rc': 1}
+[2.879662] (-) EventReactorShutdown: {}

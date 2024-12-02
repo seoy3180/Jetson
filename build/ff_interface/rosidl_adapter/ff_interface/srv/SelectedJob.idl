@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ff_interface/srv/SelectedJob.srv
+// generated code does not contain a copyright notice
+
+
+module ff_interface {
+  module srv {
+    struct SelectedJob_Request {
+      string job_name;
+    };
+    struct SelectedJob_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

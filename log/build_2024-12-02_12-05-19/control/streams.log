@@ -1,0 +1,39 @@
+[1.530s] Invoking command in '/home/rokey1/Jetson_ws/src/control': PYTHONPATH=/home/rokey1/Jetson_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /home/rokey1/Jetson_ws/build/control/build install --record /home/rokey1/Jetson_ws/build/control/install.log --single-version-externally-managed install_data
+[2.091s] running egg_info
+[2.092s] creating ../../build/control/control.egg-info
+[2.093s] writing ../../build/control/control.egg-info/PKG-INFO
+[2.094s] writing dependency_links to ../../build/control/control.egg-info/dependency_links.txt
+[2.094s] writing entry points to ../../build/control/control.egg-info/entry_points.txt
+[2.094s] writing requirements to ../../build/control/control.egg-info/requires.txt
+[2.094s] writing top-level names to ../../build/control/control.egg-info/top_level.txt
+[2.095s] writing manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[2.098s] reading manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[2.100s] writing manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[2.100s] running build
+[2.100s] running build_py
+[2.100s] creating /home/rokey1/Jetson_ws/build/control/build
+[2.101s] creating /home/rokey1/Jetson_ws/build/control/build/lib
+[2.101s] creating /home/rokey1/Jetson_ws/build/control/build/lib/control
+[2.101s] copying control/control_node.py -> /home/rokey1/Jetson_ws/build/control/build/lib/control
+[2.102s] copying control/navigation.py -> /home/rokey1/Jetson_ws/build/control/build/lib/control
+[2.102s] copying control/__init__.py -> /home/rokey1/Jetson_ws/build/control/build/lib/control
+[2.102s] running install
+[2.103s] running install_lib
+[2.105s] creating /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control
+[2.105s] copying /home/rokey1/Jetson_ws/build/control/build/lib/control/control_node.py -> /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control
+[2.105s] copying /home/rokey1/Jetson_ws/build/control/build/lib/control/navigation.py -> /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control
+[2.105s] copying /home/rokey1/Jetson_ws/build/control/build/lib/control/__init__.py -> /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control
+[2.107s] byte-compiling /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control/control_node.py to control_node.cpython-310.pyc
+[2.109s] byte-compiling /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control/navigation.py to navigation.cpython-310.pyc
+[2.110s] byte-compiling /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control/__init__.py to __init__.cpython-310.pyc
+[2.110s] running install_data
+[2.110s] creating /home/rokey1/Jetson_ws/install/control/share/ament_index
+[2.111s] creating /home/rokey1/Jetson_ws/install/control/share/ament_index/resource_index
+[2.111s] creating /home/rokey1/Jetson_ws/install/control/share/ament_index/resource_index/packages
+[2.111s] copying resource/control -> /home/rokey1/Jetson_ws/install/control/share/ament_index/resource_index/packages
+[2.111s] copying package.xml -> /home/rokey1/Jetson_ws/install/control/share/control
+[2.111s] running install_egg_info
+[2.115s] Copying ../../build/control/control.egg-info to /home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info
+[2.117s] running install_scripts
+[2.159s] writing list of installed files to '/home/rokey1/Jetson_ws/build/control/install.log'
+[2.231s] Invoked command in '/home/rokey1/Jetson_ws/src/control' returned '0': PYTHONPATH=/home/rokey1/Jetson_ws/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey1/Jetson_ws/install/control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /home/rokey1/Jetson_ws/build/control/build install --record /home/rokey1/Jetson_ws/build/control/install.log --single-version-externally-managed install_data

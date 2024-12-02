@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ff_interface/msg/ArucoDetections.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseArray.idl"
+
+module ff_interface {
+  module msg {
+    struct ArucoDetections {
+      @verbatim (language="comment", text=
+        "감지된 마커들의 ID 리스트")
+      sequence<int32> marker_ids;
+
+      @verbatim (language="comment", text=
+        "각 마커의 PoseArray (position + orientation)")
+      geometry_msgs::msg::PoseArray poses;
+    };
+  };
+};

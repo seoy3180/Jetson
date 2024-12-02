@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ff_interface/srv/ConveyorRun.srv
+// generated code does not contain a copyright notice
+
+
+module ff_interface {
+  module srv {
+    struct ConveyorRun_Request {
+      @verbatim (language="comment", text=
+        "steps == 0이면 정지, 양수는 해당 스텝만큼 구동")
+      int32 steps;
+    };
+    struct ConveyorRun_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

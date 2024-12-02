@@ -1,0 +1,11 @@
+{
+  "package_name": "ff_interface",
+  "non_idl_tuples": [
+    "/home/rokey1/Jetson_ws/src/ff_interface:msg/ArucoDetections.msg",
+    "/home/rokey1/Jetson_ws/src/ff_interface:srv/ConveyorRun.srv",
+    "/home/rokey1/Jetson_ws/src/ff_interface:srv/ConveyorConnection.srv",
+    "/home/rokey1/Jetson_ws/src/ff_interface:srv/SelectedJob.srv",
+    "/home/rokey1/Jetson_ws/src/ff_interface:srv/BoxDetectandPick.srv",
+    "/home/rokey1/Jetson_ws/src/ff_interface:action/Job.action"
+  ]
+}
