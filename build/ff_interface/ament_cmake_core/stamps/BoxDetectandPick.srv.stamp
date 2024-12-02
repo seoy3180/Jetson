@@ -1,0 +1,4 @@
+string color        # 요청할 박스의 색상 (e.g., "red", "blue", "purple")
+---
+bool success        # 박스 집기 성공 여부
+string box_color    # 잡은 박스의 색상

@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ff_interface/srv/BoxDetectandPick.srv
+// generated code does not contain a copyright notice
+
+
+module ff_interface {
+  module srv {
+    struct BoxDetectandPick_Request {
+      @verbatim (language="comment", text=
+        "요청할 박스의 색상 (e.g., \"red\", \"blue\", \"purple\")")
+      string color;
+    };
+    struct BoxDetectandPick_Response {
+      @verbatim (language="comment", text=
+        "박스 집기 성공 여부")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "잡은 박스의 색상")
+      string box_color;
+    };
+  };
+};
