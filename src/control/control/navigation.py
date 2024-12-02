@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist, PoseStamped
 from ff_interface.srv import RobotControl
+import math
 
 class Navigation:
     def __init__(self, node: Node):
@@ -25,27 +26,40 @@ class Navigation:
         """Callback to update the robot's current position."""
         self.current_pose = msg.pose
 
-    async def go_to(self, relative_x, relative_y, angle_between):
+    async def go_to(self, relative_x, relative_y, angle_between, target_x, target_y):
         """
-        상대 좌표와 각도를 기반으로 로봇을 이동
+        현재 위치 (relative_x, relative_y, angle_between)와 목표 위치 (target_x, target_y)를 기반으로 이동
         """
-        # 현재 각도 차이를 보정
-        while abs(angle_between) > 0.1:  # 허용 오차 0.1 라디안
+        # 목표와의 거리 및 각도 계산
+        delta_x = target_x - relative_x
+        delta_y = target_y - relative_y
+        distance_to_target = math.sqrt(delta_x ** 2 + delta_y ** 2)
+        angle_to_target = math.atan2(delta_y, delta_x)
+
+        # 현재 방향과 목표 방향의 각도 차이
+        angle_diff = angle_to_target - angle_between
+
+        # 회전
+        while abs(angle_diff) > 0.1:  # 허용 오차 0.1 라디안
             twist = Twist()
-            twist.angular.z = 0.3 if angle_between > 0 else -0.3
+            twist.angular.z = 0.3 if angle_diff > 0 else -0.3
             self.cmd_vel_pub.publish(twist)
-            self.node.get_logger().info(f"Adjusting angle: {angle_between:.2f}")
+            self.node.get_logger().info(f"Adjusting angle: {angle_diff:.2f}")
             rclpy.spin_once(self.node, timeout_sec=0.1)
+            angle_diff = angle_to_target - angle_between  # Update after rotation
 
         # 직선 이동
-        distance = math.sqrt(relative_x ** 2 + relative_y ** 2)
-        while distance > 0.05:  # 허용 오차 0.05 미터
+        while distance_to_target > 0.05:  # 허용 오차 0.05 미터
             twist = Twist()
             twist.linear.x = 0.2
             self.cmd_vel_pub.publish(twist)
-            self.node.get_logger().info(f"Moving straight: distance={distance:.2f}")
+            self.node.get_logger().info(f"Moving straight: distance={distance_to_target:.2f}")
             rclpy.spin_once(self.node, timeout_sec=0.1)
-            distance = math.sqrt(relative_x ** 2 + relative_y ** 2)
+
+            # Update relative position
+            delta_x = target_x - relative_x
+            delta_y = target_y - relative_y
+            distance_to_target = math.sqrt(delta_x ** 2 + delta_y ** 2)
 
         # 정지
         twist = Twist()

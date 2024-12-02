@@ -83,10 +83,11 @@ class ControlNode(Node):
 
             # Drop the box
             self.get_logger().info("Releasing box at destination2...")
-            self.manipulation.release_gripper()
+            self.manipulation.release_gripper() # 구현해야함
 
+        ''''
         # Step 7: Navigate to destination3
-        self.get_logger().info("Navigating to destination3...")
+        self.get_logger().info("Navigating to destination3...")color
         await self.navigation.go_to(self.relative_x, self.relative_y, self.angle_between, self.destinations[3][0], self.destinations[3][1])
         
         # Step 8: Pick purple box
@@ -102,11 +103,13 @@ class ControlNode(Node):
         self.get_logger().info(f"Navigating to section{section}...")
         await self.navigation.go_to(self.relative_x, self.relative_y, self.angle_between, self.sections[section][0], self.sections[section][1])
         
+        # 릴리즈 구현해야함
+        '''
 
         # Job completed
         self.get_logger().info("Job completed successfully!")
         goal_handle.succeed()
-        return Job.Result(status="success", job_completed=True, details=f"Completed job at section{section}.")
+        return Job.Result(status="success", job_completed=True, details=f"Completed job.")
 
     def parse_job_boxes(self, job):
         """Parse the job and return the list of box colors."""
