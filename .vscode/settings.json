@@ -1,0 +1,20 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/rokey/Jetson/install/control/lib/python3.10/site-packages",
+        "/home/rokey/Fullfillment_ws/install/fullfillment/lib/python3.10/site-packages",
+        "/home/rokey/Fullfillment_ws/install/ff_interface/local/lib/python3.10/dist-packages",
+        "/home/rokey/Fullfillment_ws/install/conveyor/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/home/rokey/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/rokey/Jetson/install/control/lib/python3.10/site-packages",
+        "/home/rokey/Fullfillment_ws/install/fullfillment/lib/python3.10/site-packages",
+        "/home/rokey/Fullfillment_ws/install/ff_interface/local/lib/python3.10/dist-packages",
+        "/home/rokey/Fullfillment_ws/install/conveyor/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/home/rokey/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.12/site-packages"
+    ]
+}
