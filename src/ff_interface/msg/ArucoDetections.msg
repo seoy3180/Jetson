@@ -1,2 +1,3 @@
-int32[] marker_ids                # 감지된 마커들의 ID 리스트
-geometry_msgs/PoseArray poses     # 각 마커의 PoseArray (position + orientation)
+float32 relative_x           # 53번 마커의 상대 x 좌표
+float32 relative_y           # 53번 마커의 상대 y 좌표
+float32 angle_between        # 54번과 53번 마커의 X축 사이 각도

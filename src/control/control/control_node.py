@@ -5,7 +5,7 @@ from ff_interface.action import Job  # Define your custom Job Action
 from ff_interface.srv import BoxDetectandPick
 from geometry_msgs.msg import Twist, Pose
 from navigation import Navigation
-
+from ff_interface.msg import ArucoDetections
 
 class ControlNode(Node):
     def __init__(self):
@@ -25,31 +25,37 @@ class ControlNode(Node):
         # /cmd_vel publisher for robot movement
         self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
 
-        # /ArUcoDetections subscriber for detecting destinations
-        self.destination_sub = self.create_subscription(
-            Pose,
+        # /ArucoDetections 구독
+        self.create_subscription(
+            ArucoDetections,
             '/ArucoDetections',
             self.aruco_callback,
             10
         )
 
+        self.relative_x = None
+        self.relative_y = None
+        self.angle_between = None
+
         # Predefined destinations and sections
         self.destinations = {
-            1: Pose(x=1.0, y=2.0, z=0.0),
-            2: Pose(x=2.0, y=3.0, z=0.0),
-            3: Pose(x=3.0, y=4.0, z=0.0),
-            4: Pose(x=4.0, y=5.0, z=0.0),
+            1: [0, 0],
+            2: [0, 0],
+            3: [0, 0],
+            4: [0, 0]
         }
 
         self.sections = {
-            1: Pose(x=5.0, y=6.0, z=0.0),
-            2: Pose(x=6.0, y=7.0, z=0.0),
-            3: Pose(x=7.0, y=8.0, z=0.0),
+            1: [0, 0],
+            2: [0, 0],
+            3: [0, 0]
         }
 
     def aruco_callback(self, msg):
-        """Callback to update the robot's current position from /ArucoDetections."""
-        self.current_pose = msg  # Save the robot's current Pose
+        """/ArucoDetections 메시지 처리"""
+        self.relative_x = msg.relative_x
+        self.relative_y = msg.relative_y
+        self.angle_between = msg.angle_between
 
     async def execute_job_callback(self, goal_handle):
         """Execute job action based on the received goal."""
@@ -58,7 +64,7 @@ class ControlNode(Node):
         
         # Step 1: Navigate to destination1
         self.get_logger().info("Navigating to destination1...")
-        await self.navigation.go_to(self.destinations[1], self.current_pose)
+        await self.navigation.go_to(self.relative_x, self.relative_y, self.angle_between, self.destinations[1][0], self.destinations[1][1])
 
         # Step 2-6: Handle boxes for job
         box_colors = self.parse_job_boxes(job)
@@ -73,7 +79,7 @@ class ControlNode(Node):
 
             # Navigate to destination2
             self.get_logger().info("Navigating to destination2...")
-            await self.navigation.go_to(self.destinations[2], self.current_pose)
+            await self.navigation.go_to(self.relative_x, self.relative_y, self.angle_between, self.destinations[2][0], self.destinations[2][1])
 
             # Drop the box
             self.get_logger().info("Releasing box at destination2...")
@@ -81,7 +87,7 @@ class ControlNode(Node):
 
         # Step 7: Navigate to destination3
         self.get_logger().info("Navigating to destination3...")
-        await self.navigation.go_to(self.destinations[3], self.current_pose)
+        await self.navigation.go_to(self.relative_x, self.relative_y, self.angle_between, self.destinations[3][0], self.destinations[3][1])
         
         # Step 8: Pick purple box
         self.get_logger().info("Picking up purple box...")
@@ -94,7 +100,8 @@ class ControlNode(Node):
         # Step 10: Navigate to destination4 and appropriate section
         section = self.get_section_from_job(job)
         self.get_logger().info(f"Navigating to section{section}...")
-        await self.navigation.go_to(self.sections[section], self.current_pose)
+        await self.navigation.go_to(self.relative_x, self.relative_y, self.angle_between, self.sections[section][0], self.sections[section][1])
+        
 
         # Job completed
         self.get_logger().info("Job completed successfully!")

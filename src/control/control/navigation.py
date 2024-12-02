@@ -25,36 +25,35 @@ class Navigation:
         """Callback to update the robot's current position."""
         self.current_pose = msg.pose
 
-    async def go_to(self, target_pose):
+    async def go_to(self, relative_x, relative_y, angle_between):
         """
-        Navigate the robot to the specified target position.
-
-        :param target_pose: Target pose as a geometry_msgs/Pose
-        :return: True if successfully reached the target, otherwise False
+        상대 좌표와 각도를 기반으로 로봇을 이동
         """
-        self.node.get_logger().info("Navigating to target position...")
-        
-        # Basic logic to move towards the target
-        rate = self.node.create_rate(10)  # 10 Hz
-        while rclpy.ok():
-            if not self.current_pose:
-                self.node.get_logger().info("Waiting for current position data...")
-                rate.sleep()
-                continue
-            
-            # Compute distance to target
-            distance = self.compute_distance(self.current_pose, target_pose)
-            if distance < 0.1:  # Tolerance for reaching the target
-                self.node.get_logger().info("Target reached!")
-                self.stop()
-                return True
+        # 현재 각도 차이를 보정
+        while abs(angle_between) > 0.1:  # 허용 오차 0.1 라디안
+            twist = Twist()
+            twist.angular.z = 0.3 if angle_between > 0 else -0.3
+            self.cmd_vel_pub.publish(twist)
+            self.node.get_logger().info(f"Adjusting angle: {angle_between:.2f}")
+            rclpy.spin_once(self.node, timeout_sec=0.1)
 
-            # Compute velocity command (example: proportional controller)
-            velocity = self.compute_velocity(self.current_pose, target_pose)
-            self.cmd_vel_pub.publish(velocity)
-            rate.sleep()
+        # 직선 이동
+        distance = math.sqrt(relative_x ** 2 + relative_y ** 2)
+        while distance > 0.05:  # 허용 오차 0.05 미터
+            twist = Twist()
+            twist.linear.x = 0.2
+            self.cmd_vel_pub.publish(twist)
+            self.node.get_logger().info(f"Moving straight: distance={distance:.2f}")
+            rclpy.spin_once(self.node, timeout_sec=0.1)
+            distance = math.sqrt(relative_x ** 2 + relative_y ** 2)
 
-        return False
+        # 정지
+        twist = Twist()
+        twist.linear.x = 0.0
+        twist.angular.z = 0.0
+        self.cmd_vel_pub.publish(twist)
+        self.node.get_logger().info("Goal reached.")
+
 
     def compute_distance(self, current_pose, target_pose):
         """
