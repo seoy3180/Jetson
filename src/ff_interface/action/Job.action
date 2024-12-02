@@ -1,0 +1,5 @@
+string job          # 작업에 대한 요청 (e.g., "red2, blue1, section1")
+---
+string status       # 응답 상태 (e.g., "success" or "error")
+bool job_completed  # 작업 완료 여부
+string details      # 추가 상세 정보 (e.g., "Completed job at section1.")
